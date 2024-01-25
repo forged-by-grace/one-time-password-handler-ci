@@ -1,6 +1,5 @@
 from dataclasses_avroschema.pydantic import AvroBaseModel
 from pydantic import Field, EmailStr
-from core.enums.enum import *
 from datetime import datetime
 
 

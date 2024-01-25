@@ -1,7 +1,5 @@
 from dataclasses_avroschema.pydantic import AvroBaseModel
 from pydantic import Field
-from core.enums.enum import *
-from typing import Dict
 
 
 class Cache(AvroBaseModel):
