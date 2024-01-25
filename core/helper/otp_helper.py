@@ -1,4 +1,4 @@
-from core.model.notification_avro_model import NotificationTemplate, NotificationChannel, Notification
+from core.model.notification_avro_model import Notification
 from core.model.otp_avro_model import OTPAvroOut, OTPAvroIn
 from datetime import datetime, timedelta
 import secrets
@@ -8,7 +8,7 @@ from core.event.produce_event import produce_event
 from core.model.cache_model import Cache
 from core.utils.init_log import logger
 from core.helper.encryption_helper import encrypt
-
+from core.enums.enum import NotificationChannel, NotificationTemplate
 
 async def generate_otp(length: int):
     alphabet = string.ascii_letters + string.digits
