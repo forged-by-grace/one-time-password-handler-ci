@@ -24,7 +24,7 @@ pipeline {
 
         stage('Checkout from Git') {
             steps {
-                git branch: 'main', url: 'https://github.com/forged-by-grace/one-time-password-handler.git'
+                git branch: 'main', url: 'https://github.com/forged-by-grace/one-time-password-handler-ci.git'
             }
         }
 
