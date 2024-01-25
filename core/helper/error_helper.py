@@ -1,4 +1,4 @@
-from core.model.error_model import *
+from core.model.error_model import ServiceError
 from core.utils.settings import settings
 from core.event.produce_event import produce_event
 

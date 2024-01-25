@@ -1,11 +1,11 @@
-from core.model.notification_avro_model import *
-from core.model.otp_avro_model import *
+from core.model.notification_avro_model import NotificationTemplate, NotificationChannel, Notification
+from core.model.otp_avro_model import OTPAvroOut, OTPAvroIn
 from datetime import datetime, timedelta
 import secrets
 import string
 from core.utils.settings import settings
-from core.event.produce_event import *
-from core.model.cache_model import *
+from core.event.produce_event import produce_event
+from core.model.cache_model import Cache
 from core.utils.init_log import logger
 from core.helper.encryption_helper import encrypt
 
@@ -37,6 +37,7 @@ async def process_otp(data: OTPAvroIn) -> None:
 
     # Update otp dict
     otp_dict.update({'otp': encrypted_otp, 'created_on': datetime.utcnow(), 'expires_on': otp_expiry})
+
 
     # Create avro obj
     otp_avro_obj = OTPAvroOut(**otp_dict)

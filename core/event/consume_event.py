@@ -1,8 +1,7 @@
-from core.helper.consumer_helper import *
-from core.model.otp_avro_model import *
-from core.model.notification_avro_model import *
+from core.helper.consumer_helper import consume_event
+from core.model.otp_avro_model import OTPAvroIn
 from core.utils.settings import settings
-from core.helper.otp_helper import *
+from core.helper.otp_helper import process_otp
 from core.utils.init_log import logger
 
 

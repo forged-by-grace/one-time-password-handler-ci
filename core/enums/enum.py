@@ -14,11 +14,3 @@ class NotificationTemplate(str, Enum):
      new_account_registration='new_account_registration'
      transaction_verification='Transaction_verification'
      
-
-class OTP_Purpose(str, Enum):
-     email_verification='email_verification'
-     phone_verification='phone_verification'
-     forgot_password='forgot_password'
-     reset_password='reset_password'
-     transaction_verification='transaction_verification'
-     
